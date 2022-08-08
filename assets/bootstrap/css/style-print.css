@@ -1,0 +1,241 @@
+
+body{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+label{
+	cursor: pointer;
+	color: #777;
+	font-size: 14px;
+}
+
+.text-center{
+	text-align: center;
+}
+.checkbox{
+	display: inline-block;
+}
+.btn{
+	padding: 7px 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background-color: #ddd;
+	color: #333;
+	display: inline-block;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+.btn-blank{
+	border: none;
+	color: #aaa;
+	background-color: transparent;
+}
+.btn-blank:hover{
+	background-color: #eee;
+	color: #555;
+}
+.btn-blue{
+	border: 1px solid #337ab7;
+	background-color: #337ab7;
+	color: #fff;
+}
+.btn-blue:hover{
+	background-color: #286090;
+	border: 1px solid  #286090;
+}
+#non-printable{		
+	height: auto;
+	padding: 0;
+	background-color: #F4F4F6;
+	margin: 0;
+	display: block;
+	min-height: 1px;
+}
+#printable{
+	padding: 10px;
+}
+#printable td{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#printable td.plabel{
+	padding-top: 20px;
+	padding-left: 20px;
+}
+#printable td.fragile{
+	padding: 0;
+}
+p{
+	font-size: 12px;
+	margin: 0;
+	padding-bottom: 10px;
+	line-height: 1.2;
+}
+.img-logo{
+	margin-top: 10px;
+}
+.print-data{
+	border: 1px solid #000;
+	margin-bottom: 10px;
+}
+.plabel{
+	font-weight: 700;
+	font-size: 14px;
+	padding: 0;
+}
+.receiver-name{
+	text-transform: uppercase;
+	font-size: 16px;
+	padding: 0;
+}
+.address{
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+.sender{
+	padding-bottom: 20px;
+	font-size: 14px;
+}
+.fragile{
+	border-left: 2px solid #000;
+	padding: 0;
+	display: none;
+}
+.fragile h2{
+	text-align: center;
+	padding: 10px;
+	font-size: 28px;
+	line-height: 1;
+	margin: 0;
+	font-weight: 700;
+}
+.fragile p{
+	text-align: center;
+	padding: 0 10px 10px;
+	font-size: 16px;
+	margin: 0;
+	font-weight: 700;
+}
+.img-fragile{
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.left{
+	display: block;
+	float: left;
+	width: 70%;
+}
+.right{
+	display: block;
+	float: left;
+	width: 30%;
+	text-align: right;
+}
+.product-list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.product-list li{
+	line-height: 1.4em;
+}
+.expedisi{
+	text-align: left;
+	display: inline-block;
+	border: 1px solid #000;
+	margin: 15px 0;
+	font-weight: 700;
+	padding: 10px 15px;
+	font-size: 14px;
+}
+.qrcode{
+	display: none;
+}
+
+.radio-outer{
+	display: inline-block;
+}
+.checkbox-outer{
+
+}
+.block-left,
+.block-print,
+.block-options,
+.block-right{
+	display: table-cell;
+	vertical-align: top;
+	width: auto;
+	padding: 20px;
+	background-color: #f4f4f6;
+}
+.block-left{
+
+}
+.block-right{
+	
+}
+.block-print{
+	width: 300px;
+}
+.block-options{
+	width: 1000px;
+}
+.block-print, 
+.block-options{
+	overflow: hidden;
+	zoom: 1;
+}
+
+.printInvoice{
+	padding: 0;
+}
+
+@page {
+  margin: 2mm 0 0;
+  padding: 0;
+}
+@page :first{
+  margin: 0;
+  padding: 0;
+}
+
+@media print{
+	#non-printable { 
+		display: none; 
+	}
+
+	#printable { 
+		display: block; 
+        margin: 0;
+        padding: 2mm;
+    }
+    .print-data{
+    	border: 1px solid #000;
+    	margin: 0 0 4mm;
+    	padding: 0;
+    }
+	a:link:after, a:visited:after {
+		content: "";
+	}
+	table {
+    	page-break-after: auto;
+        page-break-inside: avoid;
+        break-inside: avoid;
+	}  
+
+	.block-left,
+	.block-print,
+	.block-options,
+	.block-right{
+		display: none;
+	}
+
+}
